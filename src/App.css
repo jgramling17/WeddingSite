@@ -1,19 +1,13 @@
-.App {
+body > #root {
+  min-height: 100vh;
+}
+
+.landing-image {
   text-align: center;
+  background-color: #282c34;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.background-image {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,6 +16,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-attachment: fixed;
+  background-position: center 30%;
+  background-size: cover;
 }
 
 .App-link {
@@ -34,5 +31,208 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.date {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.fancy-h1 {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 2px 50px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  border-top-style: double;
+  border-top-color: white;
+  border-bottom-style: double;
+  border-bottom-color: white;
+}
+
+.fancy-h2 {
+  margin: auto;
+  margin-top: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+}
+
+.fancy-h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-family: "Arvo", serif;
+  font-size: 15px;
+  line-height: 26px;
+  margin-bottom: 25px;
+  margin: 0 0 10px;
+  text-align: center;
+  color: #6a6a6a;
+}
+
+.side-spacer {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-text {
+  max-width: 750px;
+  margin-bottom: 50px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-item {
+  flex-grow: 1;
+}
+
+.flex-item .grow-3 {
+  flex-grow: 3;
+}
+
+img.flex-item {
+  /* border: 18px solid #FFF; */
+  height: 50vh;
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  /* box-sizing: border-box; */
+}
+
+.date-bubble {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: #f0394d;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  top: -45px;
+  position: relative;
+}
+
+.fixed-height {
+  height: 45px;
+}
+
+.day {
+  margin-top: 13px;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.month-year {
+  font-size: 20px;
+}
+
+.milestone {
+  margin-bottom: 30px;
+}
+
+.space-bottom {
+  margin-bottom: 30px;
+}
+
+.retailer-container {
+  padding: 0.75rem;
+  height: 140px;
+}
+
+.retailer-img {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button.list-buttons {
+  margin-bottom: 15px;
+}
+
+.submit-rsvp-form {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+  .side-spacer .container {
+    width: 1170px;
+  }
+  .side-spacer .flex-container {
+    width: 1170px;
+  }
+  img.flex-item {
+    min-width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .side-spacer .container {
+    width: 970px;
+  }
+  .side-spacer .flex-container {
+    width: 970px;
+  }
+}
+@media (min-width: 768px) {
+  .side-spacer .container {
+    width: 750px;
+  }
+  .side-spacer .flex-container {
+    width: 750px;
+  }
+  .side-spacer .submit-rsvp-form {
+    max-width: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .App-header {
+    background-attachment: initial;
+  }
+  .submit-rsvp-form {
+    padding-right: initial;
+    padding-left: initial;
+    margin-right: initial;
+    margin-left: initial;
   }
 }
